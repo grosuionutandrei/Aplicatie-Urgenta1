@@ -2,6 +2,7 @@ package siit.model;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.InputStream;
 import java.time.LocalDate;
 
 public class PeopleDTO {
@@ -9,13 +10,13 @@ public class PeopleDTO {
     public String state;
     public String observatii;
     public LocalDate date;
-    public String picture;
+    public byte[] picture;
 
-    public String getPicture() {
+    public byte[] getPicture() {
         return picture;
     }
 
-    public void setPicture(String picture) {
+    public void setPicture(byte[] picture) {
         this.picture = picture;
     }
 

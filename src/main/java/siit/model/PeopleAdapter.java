@@ -2,6 +2,8 @@ package siit.model;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.Part;
+import java.io.InputStream;
 import java.time.LocalDate;
 
 public class PeopleAdapter {
@@ -13,15 +15,13 @@ public class PeopleAdapter {
     private String map;
     private String mijlocDeAcces;
     private String tipHandicap;
-    private String picture;
 
-    public String getPicture() {
-        return picture;
-    }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
+
+
+
+
+
 
     public String getMap() {
         return map;

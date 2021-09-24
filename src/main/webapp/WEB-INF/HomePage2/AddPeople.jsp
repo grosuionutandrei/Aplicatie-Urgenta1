@@ -45,7 +45,7 @@
       <div class="row" >
 
       <div class="wraper">
-  <form  role="form" method="post">
+  <form  role="form" method="post" enctype='multipart/form-data'>
 
     <div class="form-group">
          <label  for="name">Nume:</label>
@@ -97,7 +97,7 @@
 
     <div class="form-group">
         <label for="image" id="iamgeLabel" >Imagine :</label>
-          <input type="text" id="image" name="picture">
+          <input type="file" id="image" name="picture">
     </div>
 
 

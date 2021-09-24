@@ -39,7 +39,6 @@ public class PeopleService {
 
 
     public List<People> getPeoples(HttpSession session) {
-        System.out.println(peopleDao.getPeoples(session.getAttribute("selected_commune").toString()));
         return peopleDao.getPeoples(session.getAttribute("selected_commune").toString());
     }
     public List<People> getPeoples1(HttpSession session){
@@ -81,7 +80,7 @@ public class PeopleService {
         quickSortDetails(peopleList, 0, peopleList.size() - 1);
         peopleList.stream().forEach(e-> System.out.println(e + " details"));
         int peopleIndex = BinarrySearchDetails(peopleList, peopleId, 0, peopleList.size() - 1);
-        System.out.println(peopleList.get(peopleIndex));
+
         return peopleList.get(peopleIndex);
     }
 
@@ -89,8 +88,6 @@ public class PeopleService {
         peopleDao.deleteFromIsolated(localniId);
         peopleDao.deleteFromHandicap(localniId);
         peopleDao.deleteFromLocalniciLocalitati(localniId);
-       // peopleDao.deleteFromContacteLocalitati(localniId);
-        //peopleDao.deleteFromContacteUtile(localniId);
         peopleDao.deleteFromLocalnici(localniId);
     }
 

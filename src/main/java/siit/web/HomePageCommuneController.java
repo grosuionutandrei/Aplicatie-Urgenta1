@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Controller
+
 public class HomePageCommuneController {
     @Autowired
     PeopleService peopleService;
@@ -105,7 +106,7 @@ public class HomePageCommuneController {
             @RequestParam("mijloc de acces") String mijlocDeAcces,
             @RequestParam("isHandicap") boolean handicap,
             @RequestParam("tip handicap") String tipHandicap,
-            @RequestParam("picture") String  picture) throws IOException
+            @RequestPart("picture") MultipartFile  picture) throws IOException
             {
                 ModelAndView mav = new ModelAndView();
 
@@ -119,7 +120,7 @@ public class HomePageCommuneController {
             peopleAdapter.setObservatii(observatii);
             peopleAdapter.setDate(date);
             peopleAdapter.setSettlement(settlementService.getSettlement(settlement, settlements));
-            peopleAdapter.setPicture(picture);
+        //    peopleAdapter.setPicture(picture);
             if (izolat) {
                 peopleAdapter.setMap(map);
                 peopleAdapter.setMijlocDeAcces(mijlocDeAcces);

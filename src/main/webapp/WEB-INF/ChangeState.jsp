@@ -16,6 +16,7 @@
                width:30%;
              }
              </style>
+
     </head>
 
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -78,12 +79,11 @@
           <hr>
           <h4>Varsta: ${people.age}</h4>
           <hr>
-          <h4>Observatii : ${people.observatii}</h4>
+          <h4>Observatii :${people.observatii}</h4>
     </div>
     <div class="col-sm-6">
-      <image src="${people.getImage()}" alt="Poza localnic" width="100%" height="100%" >
+    <image src="data:image/jpeg;base64,${people.getImage()}">
     </div>
-
      </div>
      </body>
      </html>

@@ -22,18 +22,13 @@ public class LoginController {
     @Autowired
     UserService userService;
     @RequestMapping(method = RequestMethod.GET)
-//    protected String displayLoginForm() {
-//        return "login";
-//    }
+
     protected ModelAndView displayLoginForm(){
         ModelAndView mav = new ModelAndView();
         mav.setViewName("login");
         mav.addObject("commune",comunneService.viewModelCommune());
         return mav;
     }
-
-
-
 
     @RequestMapping(method = RequestMethod.POST)
     protected ModelAndView performLogin(HttpSession session,
@@ -59,7 +54,6 @@ public class LoginController {
             mav.setViewName("redirect:/login");
             mav.addObject("error", error);
         }
-
         return mav;
     }
 }
